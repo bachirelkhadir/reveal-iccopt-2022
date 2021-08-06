@@ -78,7 +78,7 @@ class HilbertTable:
                   ShowCreation(horizontal_arrow),
                   ShowCreation(VGroup(*self.degrees)))
 
-        add_black_screen(scene)
+        scene.slide_break()
 
         #    vars
         #  ==========>
@@ -89,11 +89,11 @@ class HilbertTable:
                   ShowCreation(vertical_arrow),
                   ShowCreation(VGroup(*self.num_vars_hom)))
 
-        add_black_screen(scene)
+        scene.slide_break()
 
 
 
-        add_black_screen(scene)
+        scene.slide_break()
 
         # Table border
         for i in range(len(self.num_vars_hom)):
@@ -107,7 +107,7 @@ class HilbertTable:
             scene.add(line)
 
         
-        add_black_screen(scene)
+        scene.slide_break()
 
         def add_x(i, j):
             x = self.x_mark.copy().move_to((table_left+i, table_top-j, 0))
@@ -126,7 +126,7 @@ class HilbertTable:
                    FadeIn(add_check(2, 3)),
                    *[FadeIn(add_x(i, j))
                      for (i,j) in ((2, 4), (3, 4), (3, 3))])
-        add_black_screen(scene)
+        scene.slide_break()
 
 
 
