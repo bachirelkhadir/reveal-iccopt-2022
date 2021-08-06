@@ -434,7 +434,7 @@ class ConvexConesScene(SlideScene):
         
 
 
-class ProofScene(MovingCameraScene):
+class ProofScene(SlideScene):
     CONFIG = {
         'scale_cones': 2,
         }
