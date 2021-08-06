@@ -155,7 +155,7 @@ class HilbertTable:
         scene.remove(*self.my_objects)
 
 
-class ConvexConesScene(MovingCameraScene):
+class ConvexConesScene(SlideScene):
     CONFIG = {
 
     }
