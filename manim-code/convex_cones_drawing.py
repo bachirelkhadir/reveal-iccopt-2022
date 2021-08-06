@@ -19,7 +19,7 @@ class ConvexCones(SVGMobject):
 
     def __init__(self, **kwargs):
         SVGMobject.__init__(self, "assets/convex_cones_with_tangents.svg")
-        colorsvg.color_svg_like_file(self)
+        #colorsvg.color_svg_like_file(self)
         parts = self.parts = {
             "nonneg": self[self.index_nonneg],
             "sos": self[self.index_sos],
