@@ -1,21 +1,10 @@
-# cp ~/Dropbox/Thesis_ORFE_2020/Slides/CONVSOS/media/videos/convex_cones_drawing/720p30/ConvexConesScene.mp4 ~/Dropbox/Thesis_ORFE_2020/Slides/reveal.js/videos/CONV/ && cd ~/Dropbox/Thesis_ORFE_2020/Slides/reveal.js/videos/CONV/
 
-
-DEBUG = False
-import sys
-sys.path.append('~/Dropbox/Thesis_ORFE_2020/Slides/CONVSOS/')
-sys.path.append('/home/bachir/Dropbox/Thesis_ORFE_2020/Slides/common_imports/')
-sys.DEBUG = DEBUG
-from scipy.integrate import odeint
-from manimlib.imports import *
-from character_guy import CharacterGuy
-from scipy import linalg
-import colorsvg
+from manimlib import *
+exec(get_custom_config()["universal_import_line"])
+from colors import *
 import numpy as np
-from color_map import *
-from helper_functions import *
-
-
+from common import *
+from slide_scene import SlideScene
 
 class ConvexCones(SVGMobject):
     CONFIG = {
