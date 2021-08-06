@@ -483,7 +483,7 @@ class ProofScene(SlideScene):
 
     def trace_sos_hyperplanes(self):
         tangents_sos = self.convex_cones.parts['tangents_sos']
-        tangents_sos.set_color(GRAY)
+        tangents_sos.set_color(GREY)
         tangents_sos.scale(self.scale_cones)\
                     .move_to(self.cone_sos).shift(UP/5+LEFT/5)
         self.play(ShowCreation(tangents_sos))
