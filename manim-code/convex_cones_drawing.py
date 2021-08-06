@@ -184,12 +184,12 @@ class ConvexConesScene(SlideScene):
         # p(x) =
         self.label_p_eq.shift(4*UP)
         self.add(self.label_p_eq)
-        add_black_screen(self)
+        self.slide_break()
 
         self.label_p_hom_eq.move_to(self.label_p_eq)
         self.remove(self.label_p_eq)
         self.add(self.label_p_hom_eq)
-        add_black_screen(self)
+        self.slide_break()
 
 
 
@@ -204,7 +204,7 @@ class ConvexConesScene(SlideScene):
             GREEN)\
                     .shift(UP/6)
         self.add(arrow, self.label_nonneg)
-        add_black_screen(self)
+        self.slide_break()
 
 
         # sos
@@ -216,7 +216,7 @@ class ConvexConesScene(SlideScene):
             BLUE_E)
         self.add(self.arrow_sos)
         self.add(self.label_sos)
-        add_black_screen(self)
+        self.slide_break()
 
 
         # Zoom out
@@ -227,19 +227,19 @@ class ConvexConesScene(SlideScene):
             frame.shift, shift,
         )
         self.add(self.label_nonneg_implies_sos)
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.add_hilbert_table()
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.add_motzkin()
-        add_black_screen(self)
+        self.slide_break()
 
         
         self.remove_sos_stuff()
-        # add_black_screen(self)
+        # self.slide_break()
 
 
 
@@ -250,15 +250,15 @@ class ConvexConesScene(SlideScene):
         self.arrow_conv = self.make_arrow(self.label_conv, Dot().move_to(self.label_conv).shift(-3*RIGHT), RED_E)
         self.add(self.arrow_conv)
         self.add(self.label_conv)
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.add(self.label_conv_implies_nonneg)
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.add(self.label_euler)
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.remove_convex_stuff()
@@ -274,7 +274,7 @@ class ConvexConesScene(SlideScene):
                  self.arrow_conv,
                  self.label_conv)
 
-        add_black_screen(self)
+        self.slide_break()
         
         
         self.label_parrilo_asked.to_corner(UR).shift(FRAME_WIDTH/1.4*RIGHT)
@@ -283,26 +283,26 @@ class ConvexConesScene(SlideScene):
         stack_group_text(labs, DOWN, 1)
         align_group_text(labs)
         self.add(self.label_parrilo_asked)
-        add_black_screen(self)
+        self.slide_break()
 
 
         convex_out = convex_cones.parts['convex_out'].copy()
         self.play(Transform(convex_cones.parts['convex_out'], convex_cones.parts['convex_in']))
-        add_black_screen(self)
+        self.slide_break()
 
         self.add(self.label_blekherman)
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.play(Transform(convex_cones.parts['convex_out'], convex_out))
-        add_black_screen(self)
+        self.slide_break()
 
 
         self.add(self.label_no_examples)
-        add_black_screen(self)
+        self.slide_break()
 
         self.add(self.label_minimal_suspects)
-        add_black_screen(self)
+        self.slide_break()
 
         # add pic hilbert 
 
@@ -383,12 +383,12 @@ class ConvexConesScene(SlideScene):
         img_hilbert.scale(2).move_to((15, -2, 0))
         name.next_to(img_hilbert, DOWN)
         self.add(img_hilbert, name)
-        add_black_screen(self)
+        self.slide_break()
 
         self.table = HilbertTable()
         self.table.construct(self)
         self.table_as_vgroup = VGroup(*self.table.my_objects)
-        add_black_screen(self)
+        self.slide_break()
 
 
     def add_motzkin(self):
@@ -398,13 +398,13 @@ class ConvexConesScene(SlideScene):
         lab_motz = Text(r"Motzkin\\ (1967)", color=BLACK).scale(.5)
         lab_motz.next_to(x_motz, DOWN)
         self.add(x_motz, lab_motz)
-        add_black_screen(self)
+        self.slide_break()
 
         x_robin = x_mark.copy().shift(2*UP+RIGHT)
         lab_robin = Text(r"Robinson\\ (1973)", color=BLACK).scale(.5)
         lab_robin.next_to(x_robin, DOWN)
         self.add(x_robin, lab_robin)
-        add_black_screen(self)
+        self.slide_break()
 
         self.motz_robin = VGroup(x_motz, lab_motz, x_robin, lab_robin)
 
@@ -444,27 +444,27 @@ class ProofScene(SlideScene):
 
         self.setup_cones()
         self.add(self.cone_lab_conv, self.lab_subset, self.cone_lab_sos)
-        add_black_screen(self)
+        self.slide_break()
 
         # duality
         self.setup_stars()
         self.add(self.lab_stars)
-        add_black_screen(self)
+        self.slide_break()
 
         self.play(ApplyMethod(self.lab_subset.flip))
-        add_black_screen(self)
+        self.slide_break()
 
 
         # blekherman
         self.trace_sos_hyperplanes()
-        add_black_screen(self)
+        self.slide_break()
         self.show_blekherman_thm()
-        add_black_screen(self)
+        self.slide_break()
 
 
         # cauchy schwarz
         self.trace_conv_hyperplanes()
-        add_black_screen(self)
+        self.slide_break()
         self.show_cauchy_schwarz()
 
         self.wait()
