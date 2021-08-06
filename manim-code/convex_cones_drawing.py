@@ -29,7 +29,7 @@ class ConvexCones(SVGMobject):
             "tangents_sos": self[self.index_tangents_sos:],
         }
         colors = {
-            "nonneg": (LIGHT_GREY, WHITE),
+            "nonneg": (GREY, WHITE),
             "sos": (MAROON_E, MAROON_A),
             "convex_out": (GREEN_A, GREEN_E),
             "convex_in": (GREEN_A, GREEN_E),
