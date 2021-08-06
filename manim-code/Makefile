@@ -5,13 +5,11 @@
 # @version 0.1
 
 CauchySchwarz:
-	manimgl cauchy_schwarz.py CauchySchwarz -w && bash -c "cp output/{CauchySchwarz.txt,videos/CauchySchwarz.mp4} ../reveal/videos"
-
-
+	manimgl cauchy_schwarz.py CauchySchwarz -w
 ProofScene:
-	manimgl convex_cones_drawing.py ProofScene -w &&bash -c "cp output/{CauchySchwarz.txt,videos/CauchySchwarz.mp4} ../reveal/videos"
+	manimgl convex_cones_drawing.py ProofScene -w
 
 
 
 Produce:
- bash -c "cp output/*txt output/*/*mp4 ../reveal/videos "
+ bash -c "cp output/*txt output/*/*mp4 ../reveal/videos"
