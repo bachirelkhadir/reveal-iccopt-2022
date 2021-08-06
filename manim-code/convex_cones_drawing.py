@@ -133,10 +133,10 @@ class HilbertTable:
 
 
     def setup_labels(self):
-        self.label_degree = TextMobject("degree")
-        self.label_num_vars = TextMobject("\# of variables")
-        self.degrees = [TexMobject("2"), TexMobject("4"), TexMobject(r"\ge 6")]
-        self.num_vars_hom = [TexMobject("1"), TexMobject("2"), TexMobject("3"),  TexMobject(r"\ge 4")]
+        self.label_degree = Text("degree")
+        self.label_num_vars = Text("\# of variables")
+        self.degrees = [Tex("2"), Tex("4"), Tex(r"\ge 6")]
+        self.num_vars_hom = [Tex("1"), Tex("2"), Tex("3"),  Tex(r"\ge 4")]
 
         self.x_mark = SVGMobject("x-mark.svg").scale(.2).set_color(RED)
         self.check_mark = SVGMobject("correct.svg").scale(.2).set_color(GREEN)
@@ -313,46 +313,46 @@ class ConvexConesScene(SlideScene):
 
 
     def setup_labels(self):
-        self.label_p_eq = TexMobject(r"p(x) = \sum_{k_1+\ldots+k_n \le 2d} c_k \, x_1^{k_1} \cdots  x_{\color{red}n}^{k_n}")
-        self.label_p_hom_eq = TexMobject(r"p(x) = \sum_{k_1+\ldots+k_n = 2d} c_k \, x_1^{k_1} \cdots  x_{\color{red}n}^{k_n}")
+        self.label_p_eq = Tex(r"p(x) = \sum_{k_1+\ldots+k_n \le 2d} c_k \, x_1^{k_1} \cdots  x_{\color{red}n}^{k_n}")
+        self.label_p_hom_eq = Tex(r"p(x) = \sum_{k_1+\ldots+k_n = 2d} c_k \, x_1^{k_1} \cdots  x_{\color{red}n}^{k_n}")
 
-        self.label_nonneg = TexMobject(r"p(x) \ge 0 \quad \forall x \in \mathbb R^n").scale(.8)
-        self.label_sos = TexMobject(r"p(x) = \sum_i q_i(x)^2").scale(.8)
-        self.label_conv = TexMobject(r"p \text{ convex}\\\nabla^2 p(x) \succeq 0").scale(.8)
+        self.label_nonneg = Tex(r"p(x) \ge 0 \quad \forall x \in \mathbb R^n").scale(.8)
+        self.label_sos = Tex(r"p(x) = \sum_i q_i(x)^2").scale(.8)
+        self.label_conv = Tex(r"p \text{ convex}\\\nabla^2 p(x) \succeq 0").scale(.8)
 
         # right column
         scale_factor = .9
-        self.label_parrilo_asked = TextMobject(*r"07', Parrilo Asked: |\textbf{Are all convex forms sos?}".split("|"))
-        self.label_blekherman = TextMobject(*r"""09', Blekherman:
+        self.label_parrilo_asked = Text(*r"07', Parrilo Asked: |\textbf{Are all convex forms sos?}".split("|"))
+        self.label_blekherman = Text(*r"""09', Blekherman:
         {No}\\
         For $2d \ge 4$ there are many more convex\\
         forms than sos as $n \rightarrow \infty$""".split("\n"))
         align_group_text([self.label_blekherman[0], *self.label_blekherman[2:]])
 
 
-        self.label_no_examples = TextMobject(*r"- {No}| explicit examples are known!\\ \hspace{.75cm} - Smallest $(n, 2d)$ for such an example?".split("|"))
+        self.label_no_examples = Text(*r"- {No}| explicit examples are known!\\ \hspace{.75cm} - Smallest $(n, 2d)$ for such an example?".split("|"))
 
 
-        self.label_minimal_suspects = TextMobject(*r"""Minimal suspects:\\
+        self.label_minimal_suspects = Text(*r"""Minimal suspects:\\
         $(n, 2d) = (4,4)$ and $(3, 6)$""".split("\n"))
         align_group_text(self.label_minimal_suspects)
 
 
         # Nonegative ==> SOS?
-        self.label_nonneg_implies_sos = TextMobject(r"Nonnegative $\Rightarrow$ ", "SOS", " ?")
+        self.label_nonneg_implies_sos = Text(r"Nonnegative $\Rightarrow$ ", "SOS", " ?")
         self.label_nonneg_implies_sos[1].set_color(BLUE_B)
         self.label_nonneg_implies_sos.scale(1.5)
         self.label_nonneg_implies_sos.move_to((12, 2, 0))
 
         # Convex ==> Nonnegative?
-        self.label_conv_implies_nonneg = TextMobject(r"Convex $\Rightarrow$ ", "Nonnegative", " ?")
+        self.label_conv_implies_nonneg = Text(r"Convex $\Rightarrow$ ", "Nonnegative", " ?")
         self.label_conv_implies_nonneg[0].set_color(MAROON_A)
         self.label_conv_implies_nonneg.scale(1.5)
         self.label_conv_implies_nonneg.move_to(self.label_nonneg_implies_sos)
 
 
         # Euler identity
-        self.label_euler = TextMobject(r"""{\bf Yes!} Euler:
+        self.label_euler = Text(r"""{\bf Yes!} Euler:
         \begin{align*}p(x) &= \frac 1{2d} x^T \nabla p(x)\\
                            &= \frac 1{2d(2d-1)} x^T \nabla^2 p(x)x
         \end{align*}
@@ -377,7 +377,7 @@ class ConvexConesScene(SlideScene):
 
 
         # image with name
-        name = self.name_hilbert = TextMobject(r"\bf Hilbert, 1888", color=YELLOW)
+        name = self.name_hilbert = Text(r"\bf Hilbert, 1888", color=YELLOW)
         img_hilbert = self.img_hilbert = ImageMobject("media/hilbert.jpg")
 
         img_hilbert.scale(2).move_to((15, -2, 0))
@@ -395,13 +395,13 @@ class ConvexConesScene(SlideScene):
         x_mark = SVGMobject("x-mark.svg").scale(.1).set_color(BLUE_E)
         
         x_motz = x_mark.copy().shift(UP+3*LEFT)
-        lab_motz = TextMobject(r"Motzkin\\ (1967)", color=BLACK).scale(.5)
+        lab_motz = Text(r"Motzkin\\ (1967)", color=BLACK).scale(.5)
         lab_motz.next_to(x_motz, DOWN)
         self.add(x_motz, lab_motz)
         add_black_screen(self)
 
         x_robin = x_mark.copy().shift(2*UP+RIGHT)
-        lab_robin = TextMobject(r"Robinson\\ (1973)", color=BLACK).scale(.5)
+        lab_robin = Text(r"Robinson\\ (1973)", color=BLACK).scale(.5)
         lab_robin.next_to(x_robin, DOWN)
         self.add(x_robin, lab_robin)
         add_black_screen(self)
@@ -424,7 +424,7 @@ class ConvexConesScene(SlideScene):
 
 
     def add_theorem(self):
-        statement = TextMobject("Convex ",  "quaternary quartic forms are ", "sos.")
+        statement = Text("Convex ",  "quaternary quartic forms are ", "sos.")
         statement[0].set_color(BLUE_B)
         statement[-1].set_color(MAROON_A)
         thm = make_thm(statement, r"\textbf{Thm.} \; (\textbf{El})")
@@ -498,8 +498,8 @@ class ProofScene(SlideScene):
 
 
     def show_cauchy_schwarz(self):
-        cs_assumption = TextMobject("For any convex form of degree $4$")
-        cs_inequality = TexMobject(*r"""\frac1{12}
+        cs_assumption = Text("For any convex form of degree $4$")
+        cs_inequality = Tex(*r"""\frac1{12}
                                        x^T
                                        \nabla^2p(
                                       y
@@ -524,11 +524,11 @@ class ProofScene(SlideScene):
 
 
     def setup_stars(self):
-        lab_star_conv = TexMobject("*").scale(self.scale_cones)\
+        lab_star_conv = Tex("*").scale(self.scale_cones)\
                                        .next_to(self.cone_lab_conv, RIGHT+UP)\
                                        .shift(DOWN/2+LEFT/2)
 
-        lab_star_sos = TexMobject("*").scale(self.scale_cones)\
+        lab_star_sos = Tex("*").scale(self.scale_cones)\
                                       .next_to(self.cone_lab_sos, RIGHT+UP)\
                                       .shift(DOWN/2+LEFT/2)
 
@@ -536,13 +536,13 @@ class ProofScene(SlideScene):
         
     def setup_cones(self):
         convex_cones = self.convex_cones = ConvexCones()
-        label_conv = TextMobject("convex")
-        label_sos = TextMobject("sos")
+        label_conv = Text("convex")
+        label_sos = Text("sos")
 
         cone_conv = convex_cones.parts['convex_in']
         cone_sos = convex_cones.parts['sos']
 
-        lab_subset = self.lab_subset = TexMobject(r"\subseteq")
+        lab_subset = self.lab_subset = Tex(r"\subseteq")
 
         # placement, scaling and coloring
         cone_conv.shift(2.5*LEFT+2*UP)\
