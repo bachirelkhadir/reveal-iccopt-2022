@@ -499,24 +499,8 @@ class ProofScene(SlideScene):
 
     def show_cauchy_schwarz(self):
         cs_assumption = Text("For any convex form of degree $4$")
-        cs_inequality = Tex(*r"""\frac1{12}
-                                       x^T
-                                       \nabla^2p(
-                                      y
-                                      )
-                                       x
-                                      \le
-                                       \sqrt{p(x)}
-                                       \sqrt{p(y)}
-                                      \quad \forall
-                                       x
-                                      ,
-                                       y
-                                      \in \mathbb R^n""".split("\n"))
+        cs_inequality = Tex("\frac1{12} x^T \nabla^2p(y) x \le \sqrt{p(x)} \sqrt{p(y)} \quad \forall x , y \in \mathbb R^n")
 
-        cs_inequality.set_color_by_tex_to_color_map({
-            "x": RED,
-            "y": BLUE})
         VGroup(cs_assumption, cs_inequality).arrange(DOWN)
         cs_thm = make_thm(VGroup(cs_assumption, cs_inequality),  r"\textbf{Thm} \; (\textbf{El})")
         cs_thm.move_to((-3, -1.5, 0)).scale(.6)
