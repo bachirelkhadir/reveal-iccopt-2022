@@ -502,7 +502,7 @@ class ProofScene(SlideScene):
         cs_inequality = Tex("\frac1{12} x^T \nabla^2p(y) x \le \sqrt{p(x)} \sqrt{p(y)} \quad \forall x , y \in \mathbb R^n")
 
         VGroup(cs_assumption, cs_inequality).arrange(DOWN)
-        cs_thm = make_thm(VGroup(cs_assumption, cs_inequality),  r"\textbf{Thm} \; (\textbf{El})")
+        cs_thm = make_thm(VGroup(cs_assumption, cs_inequality),  )
         cs_thm.move_to((-3, -1.5, 0)).scale(.6)
         self.add(cs_thm)
 
