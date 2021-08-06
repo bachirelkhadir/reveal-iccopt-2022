@@ -517,7 +517,7 @@ class ProofScene(SlideScene):
         cs_inequality.set_color_by_tex_to_color_map({
             "x": RED,
             "y": BLUE})
-        align_group_text(stack_group_text([cs_assumption, cs_inequality]))
+        VGroup(cs_assumption, cs_inequality).arrange(DOWN)
         cs_thm = make_thm(VGroup(cs_assumption, cs_inequality),  r"\textbf{Thm} \; (\textbf{El})")
         cs_thm.move_to((-3, -1.5, 0)).scale(.6)
         self.add(cs_thm)
