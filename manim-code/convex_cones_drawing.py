@@ -491,7 +491,7 @@ class ProofScene(SlideScene):
 
 
     def show_blekherman_thm(self):
-        img_blekherman_thm = ImageMobject("theorem_blekherman.png")
+        img_blekherman_thm = ImageMobject("assets/theorem_blekherman.png")
         img_blekherman_thm.scale(.75)\
             .next_to(self.cone_sos, DOWN, LARGE_BUFF)
         self.add(img_blekherman_thm)
