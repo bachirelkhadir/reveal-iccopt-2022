@@ -152,6 +152,7 @@ class HilbertTable:
 
 class LabeledPolynomialDiscovery(Group):
     def __init__(self, name, year, ):
+        super().__init__()
         self.x_mark = SVGMobject("assets/x-mark.svg").scale(.1)
         self.name = Text(name)
         self.year= Text(year)
