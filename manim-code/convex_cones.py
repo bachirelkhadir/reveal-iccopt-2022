@@ -342,11 +342,6 @@ class ConvexCones(SlideScene):
         # scale
         for lab in [self.label_parrilo_asked, self.label_blekherman, self.label_no_examples, self.label_minimal_suspects]:
             lab.scale(scale_factor)
-            lab.set_color_by_tex_to_color_map(
-                {'{No}': MAROON_A,
-                 'Are all convex forms sos?': YELLOW,
-                })
-
 
 
     def add_hilbert_table(self):
