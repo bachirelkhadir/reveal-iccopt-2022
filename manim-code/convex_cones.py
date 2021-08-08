@@ -19,14 +19,20 @@ class ConvexCones(SVGMobject):
 
     def __init__(self, **kwargs):
         SVGMobject.__init__(self, "assets/convex_cones_with_tangents.svg")
-        #colorsvg.color_svg_like_file(self)
+
+        index_nonneg= 0
+        index_sos= 1
+        index_convex_out= 2
+        index_convex_in= 3
+        index_tangents_conv= 4
+        index_tangents_sos= 11
         parts = self.parts = {
-            "nonneg": self[self.index_nonneg],
-            "sos": self[self.index_sos],
-            "convex_out": self[self.index_convex_out],
-            "convex_in": self[self.index_convex_in],
-            "tangents_conv": self[self.index_tangents_conv:self.index_tangents_sos],
-            "tangents_sos": self[self.index_tangents_sos:],
+            "nonneg": self[index_nonneg],
+            "sos": self[index_sos],
+            "convex_out": self[index_convex_out],
+            "convex_in": self[index_convex_in],
+            "tangents_conv": self[index_tangents_conv:self.index_tangents_sos],
+            "tangents_sos": self[index_tangents_sos:],
         }
         colors = {
             "nonneg": (GREY, WHITE),
