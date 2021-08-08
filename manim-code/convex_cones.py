@@ -301,7 +301,6 @@ class ConvexCones(SlideScene):
         self.label_sos = Tex(r"p(x) = \sum_i q_i(x)^2").scale(.8)
         self.label_conv = Tex(r"p \text{ convex}\\\nabla^2 p(x) \succeq 0").scale(.8)
 
-        return
         # right column
         scale_factor = .9
         self.label_parrilo_asked = Text(*r"07', Parrilo Asked: |\textbf{Are all convex forms sos?}".split("|"))
@@ -311,6 +310,7 @@ class ConvexCones(SlideScene):
         forms than sos as $n \rightarrow \infty$""".split("\n"))
         align_group_text([self.label_blekherman[0], *self.label_blekherman[2:]])
 
+        return
 
         self.label_no_examples = Text(*r"- {No}| explicit examples are known!\\ \hspace{.75cm} - Smallest $(n, 2d)$ for such an example?".split("|"))
 
