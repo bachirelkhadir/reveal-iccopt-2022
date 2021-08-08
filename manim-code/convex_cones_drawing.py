@@ -4,7 +4,7 @@ exec(get_custom_config()["universal_import_line"])
 from colors import *
 import numpy as np
 from common import *
-from slide_scene import SlideScene
+from manimslides import SlideScene
 
 class ConvexCones(SVGMobject):
     CONFIG = {
