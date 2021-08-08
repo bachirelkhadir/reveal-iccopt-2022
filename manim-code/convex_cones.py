@@ -198,6 +198,7 @@ class ConvexCones(SlideScene):
         self.add(self.label_sos)
         self.slide_break()
 
+        return
 
         # Zoom out
         scale_factor = 1.3
@@ -209,7 +210,6 @@ class ConvexCones(SlideScene):
         self.add(self.label_nonneg_implies_sos)
         self.slide_break()
 
-        return
 
         self.add_hilbert_table()
         self.slide_break()
