@@ -186,7 +186,6 @@ class ConvexCones(SlideScene):
         self.add(arrow, self.label_nonneg)
         self.slide_break()
 
-        return
 
         # sos
         self.add(convex_cones.parts['sos'])
@@ -199,6 +198,7 @@ class ConvexCones(SlideScene):
         self.add(self.label_sos)
         self.slide_break()
 
+        return
 
         # Zoom out
         scale_factor = 1.3
