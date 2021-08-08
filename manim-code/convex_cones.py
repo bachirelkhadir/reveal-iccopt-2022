@@ -30,6 +30,9 @@ class ConvexConesSVG(SVGMobject):
             "convex_in": (GREEN_A, GREEN_E),
         }
 
+        for p, c in zip(parts.values(), colors.values()):
+            p.set_fill(c[0], opacity=.8)
+            p.set_stroke(c[1], 4)
 
 
 class HilbertTable:
