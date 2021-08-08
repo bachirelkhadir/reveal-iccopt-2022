@@ -150,7 +150,7 @@ class HilbertTable:
 class ConvexCones(SlideScene):
     def construct(self):
         # camera
-        frame = self.camera_frame
+        frame = self.camera.frame
         frame.save_state()
         frame.scale(1.2).shift(.8*UP)
 
