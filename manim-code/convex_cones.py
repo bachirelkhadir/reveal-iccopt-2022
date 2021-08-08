@@ -371,8 +371,7 @@ class ConvexCones(SlideScene):
         x_mark = SVGMobject("assets/x-mark.svg").scale(.1).set_color(BLUE_E)
 
         x_motz = x_mark.copy().shift(UP+3*LEFT)
-        lab_motz = Text(r"""Motzkin (1967)
-        """).scale(.5)
+        lab_motz = Text(r"""Motzkin (1967) """).scale(.5)
         lab_motz.next_to(x_motz, DOWN)
         self.add(x_motz, lab_motz)
         self.slide_break()
