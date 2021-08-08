@@ -3,7 +3,6 @@ from manimlib import *
 exec(get_custom_config()["universal_import_line"])
 from colors import *
 import numpy as np
-from common import *
 from manimslides import SlideScene
 
 class ConvexCones(SVGMobject):
@@ -148,7 +147,7 @@ class HilbertTable:
         scene.remove(*self.my_objects)
 
 
-class ConvexConesScene(SlideScene):
+class ConvexCones(SlideScene):
     def construct(self):
         # camera
         frame = self.camera_frame
