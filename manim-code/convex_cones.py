@@ -176,7 +176,7 @@ class ConvexCones(SlideScene):
 
         # nonneg
         #scene.play(GrowFromCenter(convex_cones.parts['nonneg']))
-        self.add(convex_cones.parts['nonneg'])
+        #self.add(convex_cones.parts['nonneg'])
         self.label_nonneg.move_to((5, 2., 0))
         arrow = self.make_arrow(
             self.label_nonneg,
