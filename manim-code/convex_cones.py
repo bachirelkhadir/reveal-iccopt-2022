@@ -171,7 +171,7 @@ class ConvexCones(SlideScene):
 
         self.setup_labels()
         convex_cones = self.convex_cones = ConvexConesSVG()
-        convex_cones.set_height(10).scale(DOWN)
+        convex_cones.set_height(10).shift(DOWN)
 
 
         # p(x) =
