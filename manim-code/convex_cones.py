@@ -387,7 +387,7 @@ class ConvexCones(SlideScene):
         self.add(x_robin)
         self.slide_break()
 
-        self.motz_robin = VGroup(x_motz,x_robin)
+        self.motz_robin = Group(x_motz,x_robin)
 
 
     def remove_sos_stuff(self):
