@@ -149,14 +149,6 @@ class HilbertTable:
 
 
 class ConvexConesScene(SlideScene):
-
-    def make_arrow(self, a, b, color=GREEN):
-        arrow = Arrow(a, b)
-        arrow.set_color(color)
-        return arrow
-
-
-
     def construct(self):
         # camera
         frame = self.camera_frame
@@ -420,3 +412,8 @@ class ConvexConesScene(SlideScene):
         thm.move_to((FRAME_WIDTH/2.1, -FRAME_HEIGHT/1.7, 0)).scale(1.1)
 
         self.add(thm)
+
+    def make_arrow(self, a, b, color=GREEN):
+        arrow = Arrow(a, b)
+        arrow.set_color(color)
+        return arrow
