@@ -320,13 +320,11 @@ class ConvexCones(SlideScene):
 
         # Nonegative ==> SOS?
         self.label_nonneg_implies_sos = Text(r"Nonnegative $\Rightarrow$ SOS ?")
-        self.label_nonneg_implies_sos[1].set_color(BLUE_B)
         self.label_nonneg_implies_sos.scale(1.5)
         self.label_nonneg_implies_sos.move_to((12, 2, 0))
 
         # Convex ==> Nonnegative?
-        self.label_conv_implies_nonneg = Text(r"Convex $\Rightarrow$ ", "Nonnegative", " ?")
-        self.label_conv_implies_nonneg[0].set_color(MAROON_A)
+        self.label_conv_implies_nonneg = Text(r"Convex $\Rightarrow$ ", "Nonnegative ?")
         self.label_conv_implies_nonneg.scale(1.5)
         self.label_conv_implies_nonneg.move_to(self.label_nonneg_implies_sos)
 
