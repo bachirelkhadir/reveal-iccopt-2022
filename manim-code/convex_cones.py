@@ -222,6 +222,7 @@ class ConvexCones(SlideScene):
         self.add(self.label_nonneg_implies_sos)
         self.slide_break()
 
+        return #XXX
 
         self.add_hilbert_table()
         self.slide_break()
@@ -230,7 +231,6 @@ class ConvexCones(SlideScene):
         self.add_motzkin()
         self.slide_break()
 
-        return
 
         self.remove_sos_stuff()
         # self.slide_break()
