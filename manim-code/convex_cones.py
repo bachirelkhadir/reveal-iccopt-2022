@@ -171,7 +171,6 @@ class ConvexCones(SlideScene):
         self.add(self.label_p_hom_eq)
         self.slide_break()
 
-        return
 
 
 
@@ -187,6 +186,7 @@ class ConvexCones(SlideScene):
         self.add(arrow, self.label_nonneg)
         self.slide_break()
 
+        return
 
         # sos
         self.add(convex_cones.parts['sos'])
