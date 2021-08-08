@@ -129,7 +129,7 @@ class HilbertTable:
 
     def setup_labels(self):
         self.label_degree = Text("degree")
-        self.label_num_vars = Text("\# of variables")
+        self.label_num_vars = Text("# of variables")
         self.degrees = [Tex("2"), Tex("4"), Tex(r"\ge 6")]
         self.num_vars_hom = [Tex("1"), Tex("2"), Tex("3"),  Tex(r"\ge 4")]
 
