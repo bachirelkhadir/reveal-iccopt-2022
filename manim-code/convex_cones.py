@@ -322,7 +322,7 @@ class ConvexCones(SlideScene):
 
 
         # Nonegative ==> SOS?
-        self.label_nonneg_implies_sos = Text(r"Nonnegative $\Rightarrow$ SOS ?")
+        self.label_nonneg_implies_sos = Tex(r"\text{Nonnegative }\Rightarrow \text{ SOS} ?")
         self.label_nonneg_implies_sos.scale(1.5)
         self.label_nonneg_implies_sos.move_to((12, 2, 0))
 
