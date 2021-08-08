@@ -158,7 +158,7 @@ class ConvexCones(SlideScene):
 
         self.setup_labels()
         convex_cones = self.convex_cones = ConvexCones()
-        convex_cones.match_height(FRAME_HEIGHT-2)
+        convex_cones.set_height(FRAME_HEIGHT-2)
 
         return
 
