@@ -1,4 +1,3 @@
-
 from manimlib import *
 exec(get_custom_config()["universal_import_line"])
 from colors import *
@@ -156,11 +155,6 @@ class HilbertTable:
 
 
 class ConvexConesScene(SlideScene):
-    CONFIG = {
-
-    }
-
-
     def make_arrow(self, a, b, color=GREEN):
         arrow = Arrow(a, b)
         arrow.set_color(color)
