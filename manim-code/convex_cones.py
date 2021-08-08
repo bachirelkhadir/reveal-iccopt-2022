@@ -20,7 +20,7 @@ class ConvexConesSVG(SVGMobject):
             "sos": self[index_sos],
             "convex_out": self[index_convex_out],
             "convex_in": self[index_convex_in],
-            "tangents_conv": self[index_tangents_conv:self.index_tangents_sos],
+            "tangents_conv": self[index_tangents_conv:index_tangents_sos],
             "tangents_sos": self[index_tangents_sos:],
         }
         colors = {
