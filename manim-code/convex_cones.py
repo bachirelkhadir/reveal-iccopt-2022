@@ -5,7 +5,7 @@ from colors import *
 import numpy as np
 from manimslides import SlideScene
 
-class ConvexCones(SVGMobject):
+class ConvexConesSVG(SVGMobject):
     def __init__(self, **kwargs):
         SVGMobject.__init__(self, "assets/convex_cones_with_tangents.svg")
 
@@ -157,7 +157,7 @@ class ConvexCones(SlideScene):
 
 
         self.setup_labels()
-        convex_cones = self.convex_cones = ConvexCones()
+        convex_cones = self.convex_cones = ConvexConesSVG()
         convex_cones.set_height(FRAME_HEIGHT-2)
 
         return
