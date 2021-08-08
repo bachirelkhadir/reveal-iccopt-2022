@@ -371,13 +371,15 @@ class ConvexCones(SlideScene):
         x_mark = SVGMobject("assets/x-mark.svg").scale(.1).set_color(BLUE_E)
 
         x_motz = x_mark.copy().shift(UP+3*LEFT)
-        lab_motz = Text(r"""Motzkin (1967)""").scale(.5)
+        lab_motz = Text(r"""Motzkin
+        (1967)""").scale(.5)
         lab_motz.next_to(x_motz, DOWN)
         self.add(x_motz, lab_motz)
         self.slide_break()
 
         x_robin = x_mark.copy().shift(2*UP+RIGHT)
-        lab_robin = Text(r"Robinson\\ (1973)", color=BLACK).scale(.5)
+        lab_robin = Text(r"""Robinson
+        (1973)""", color=BLACK).scale(.5)
         lab_robin.next_to(x_robin, DOWN)
         self.add(x_robin, lab_robin)
         self.slide_break()
