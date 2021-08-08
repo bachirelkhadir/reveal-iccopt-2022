@@ -154,13 +154,13 @@ class ConvexCones(SlideScene):
         frame.save_state()
         frame.scale(1.2).shift(.8*UP)
 
-        return
 
 
         self.setup_labels()
         convex_cones = self.convex_cones = ConvexCones()
         convex_cones.set_height(FRAME_HEIGHT-2)
 
+        return
 
         # p(x) =
         self.label_p_eq.shift(4*UP)
@@ -301,6 +301,7 @@ class ConvexCones(SlideScene):
         self.label_sos = Tex(r"p(x) = \sum_i q_i(x)^2").scale(.8)
         self.label_conv = Tex(r"p \text{ convex}\\\nabla^2 p(x) \succeq 0").scale(.8)
 
+        return
         # right column
         scale_factor = .9
         self.label_parrilo_asked = Text(*r"07', Parrilo Asked: |\textbf{Are all convex forms sos?}".split("|"))
