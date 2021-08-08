@@ -316,7 +316,6 @@ class ConvexCones(SlideScene):
 
         self.label_minimal_suspects = Text(r"""Minimal suspects:
         (n, 2d) = (4,4) and (3, 6)""")
-        align_group_text(self.label_minimal_suspects)
 
 
         # Nonegative ==> SOS?
