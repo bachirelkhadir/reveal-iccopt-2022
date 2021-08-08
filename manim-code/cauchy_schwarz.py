@@ -3,7 +3,7 @@ exec(get_custom_config()["universal_import_line"])
 from colors import *
 import numpy as np
 from common import *
-from manimslide import SlideScene
+from manimslides import SlideScene
 
 
 np.random.seed(0)
