@@ -24,7 +24,7 @@ class ConvexConesSVG(SVGMobject):
             "tangents_sos": self[index_tangents_sos:],
         }
         colors = {
-            "nonneg": (GREY, WHITE),
+            "nonneg": (WHITE, BLACK),
             "sos": (MAROON_E, MAROON_A),
             "convex_out": (GREEN_A, GREEN_E),
             "convex_in": (GREEN_A, GREEN_E),
