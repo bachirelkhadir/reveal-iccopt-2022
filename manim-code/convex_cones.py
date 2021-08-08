@@ -383,7 +383,7 @@ class ConvexCones(SlideScene):
         self.slide_break()
 
         x_robin = LabeledPolynomialDiscovery("Robinson", "1973")
-        self.add(x_robin, lab_robin)
+        self.add(x_robin)
         self.slide_break()
 
         self.motz_robin = VGroup(x_motz,x_robin)
