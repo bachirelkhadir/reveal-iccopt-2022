@@ -160,6 +160,7 @@ class ConvexCones(SlideScene):
         convex_cones = self.convex_cones = ConvexCones()
         convex_cones.set_height(FRAME_HEIGHT-2)
 
+        return
 
         # p(x) =
         self.label_p_eq.shift(4*UP)
