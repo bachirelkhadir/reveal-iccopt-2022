@@ -150,6 +150,15 @@ class HilbertTable:
         scene.remove(*self.my_objects)
 
 
+class LabeledPolynomialDiscovery(VGroup):
+    def __init__(self, name, year, ):
+        x_mark = SVGMobject("assets/x-mark.svg").scale(.1).set_color(BLUE_E)
+
+        x_motz = x_mark.copy().shift(UP+3*LEFT)
+        lab_motz = Text(r"""Motzkin
+        (1967)""").scale(.5)
+        lab_motz.next_to(x_motz, DOWN)
+
 class ConvexCones(SlideScene):
     def construct(self):
         # camera
