@@ -133,8 +133,8 @@ class HilbertTable:
         self.degrees = [Tex("2"), Tex("4"), Tex(r"\ge 6")]
         self.num_vars_hom = [Tex("1"), Tex("2"), Tex("3"),  Tex(r"\ge 4")]
 
-        self.x_mark = SVGMobject("x-mark.svg").scale(.2).set_color(RED)
-        self.check_mark = SVGMobject("correct.svg").scale(.2).set_color(GREEN)
+        self.x_mark = SVGMobject("assets/x-mark.svg").scale(.2).set_color(RED)
+        self.check_mark = SVGMobject("asset/scorrect.svg").scale(.2).set_color(GREEN)
 
         self.my_objects.extend([
             self.label_degree,
