@@ -303,12 +303,11 @@ class ConvexCones(SlideScene):
 
         # right column
         scale_factor = .9
-        self.label_parrilo_asked = Text(*r"07', Parrilo Asked: Are all convex forms sos?")
-        self.label_blekherman = Text(*r"""09', Blekherman:
-        {No}\\
-        For $2d \ge 4$ there are many more convex\\
-        forms than sos as $n \rightarrow \infty$""".split("\n"))
-        align_group_text([self.label_blekherman[0], *self.label_blekherman[2:]])
+        self.label_parrilo_asked = Text(r"07', Parrilo Asked: Are all convex forms sos?")
+        self.label_blekherman = Text(r"""09', Blekherman:
+        {No}
+        For $2d \ge 4$ there are many more convex
+        forms than sos as $n \rightarrow \infty$""")
 
 
         self.label_no_examples = Text(*r"- {No}| explicit examples are known!\\ \hspace{.75cm} - Smallest $(n, 2d)$ for such an example?".split("|"))
