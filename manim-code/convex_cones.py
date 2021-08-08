@@ -353,7 +353,7 @@ class ConvexCones(SlideScene):
 
 
         # image with name
-        name = self.name_hilbert = Text(r" Hilbert, 1888", color=YELLOW)
+        name = self.name_hilbert = Text(r"Hilbert, 1888", color=YELLOW)
         img_hilbert = self.img_hilbert = ImageMobject("assets/hilbert.jpg")
 
         img_hilbert.scale(1).move_to((15, -2, 0))
