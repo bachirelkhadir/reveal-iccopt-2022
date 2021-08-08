@@ -310,7 +310,8 @@ class ConvexCones(SlideScene):
         forms than sos as $n \rightarrow \infty$""")
 
 
-        self.label_no_examples = Text(*r"- {No}| explicit examples are known!\\ \hspace{.75cm} - Smallest $(n, 2d)$ for such an example?".split("|"))
+        self.label_no_examples = Text(r"""- {No} explicit examples are known!
+        \hspace{.75cm} - Smallest $(n, 2d)$ for such an example?""")
 
 
         self.label_minimal_suspects = Text(*r"""Minimal suspects:\\
