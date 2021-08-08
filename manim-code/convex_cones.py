@@ -166,12 +166,12 @@ class ConvexCones(SlideScene):
         self.add(self.label_p_eq)
         self.slide_break()
 
-        return
         self.label_p_hom_eq.move_to(self.label_p_eq)
         self.remove(self.label_p_eq)
         self.add(self.label_p_hom_eq)
         self.slide_break()
 
+        return
 
 
 
