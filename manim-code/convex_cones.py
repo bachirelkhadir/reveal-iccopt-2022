@@ -384,7 +384,7 @@ class ConvexCones(SlideScene):
         self.slide_break()
 
         x_robin = LabeledPolynomialDiscovery("Robinson", "1973")
-        x_robin.shift(LEFT)
+        x_robin.shift(3*UL)
         self.add(x_robin)
         self.slide_break()
 
