@@ -150,7 +150,7 @@ class HilbertTable:
         scene.remove(*self.my_objects)
 
 
-class LabeledPolynomialDiscovery(VGroup):
+class LabeledPolynomialDiscovery(Group):
     def __init__(self, name, year, ):
         self.x_mark = SVGMobject("assets/x-mark.svg").scale(.1)
         self.name = Text(name)
