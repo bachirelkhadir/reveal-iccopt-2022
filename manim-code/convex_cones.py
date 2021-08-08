@@ -7,16 +7,6 @@ from common import *
 from manimslides import SlideScene
 
 class ConvexCones(SVGMobject):
-    CONFIG = {
-        "file_name": "convex_cones_with_tangents.svg",
-        "index_nonneg": 0,
-        "index_sos": 1,
-        "index_convex_out": 2,
-        "index_convex_in": 3,
-        "index_tangents_conv": 4,
-        "index_tangents_sos": 11
-    }
-
     def __init__(self, **kwargs):
         SVGMobject.__init__(self, "assets/convex_cones_with_tangents.svg")
 
@@ -159,10 +149,6 @@ class HilbertTable:
 
 
 class ConvexConesScene(SlideScene):
-    CONFIG = {
-
-    }
-
 
     def make_arrow(self, a, b, color=GREEN):
         arrow = Arrow(a, b)
