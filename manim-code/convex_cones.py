@@ -160,13 +160,13 @@ class ConvexCones(SlideScene):
         convex_cones = self.convex_cones = ConvexConesSVG()
         convex_cones.set_height(FRAME_HEIGHT-2)
 
-        return
 
         # p(x) =
         self.label_p_eq.shift(4*UP)
         self.add(self.label_p_eq)
         self.slide_break()
 
+        return
         self.label_p_hom_eq.move_to(self.label_p_eq)
         self.remove(self.label_p_eq)
         self.add(self.label_p_hom_eq)
