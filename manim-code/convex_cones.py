@@ -331,7 +331,7 @@ class ConvexCones(SlideScene):
 
         # Euler identity
         self.label_euler = Text(r"""{\bf Yes!} Euler:
-        \begin{align*}p(x) &= \frac 1{2d} x^T \nabla p(x)\\
+        \begin{align*}p(x) &= \frac 1{2d} x^T \nabla p(x)
                            &= \frac 1{2d(2d-1)} x^T \nabla^2 p(x)x
         \end{align*}
         """)\
