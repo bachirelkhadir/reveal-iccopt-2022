@@ -26,7 +26,7 @@ directories:
 style:
   font: "CMU Serif"
   #font: Consolas
-  background_color: #191919
+  background_color: "#191919"
 tex:
   executable: xelatex -no-pdf
   intermediate_filetype: xdv
