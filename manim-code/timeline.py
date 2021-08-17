@@ -107,3 +107,4 @@ class Timeline(Scene):
 
         # remove names
         self.remove(bachir_name, hilbert_name, james_name, blek_name)
+        self.wait()
