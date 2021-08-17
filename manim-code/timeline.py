@@ -12,6 +12,6 @@ class Timeline(Scene):
         lab_nvar.next_to(arrow, UR).shift(2*LEFT)
         self.add(arrow, lab_nvar)
 
-        tick = Line().scale(.2)
+        tick = Line().rotate(PI/2).scale(.2)
         self.add(tick.copy())
         self.wait()
