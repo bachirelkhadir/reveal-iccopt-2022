@@ -26,12 +26,14 @@ class Timeline(Scene):
         self.add(green_rect, green_endpoint)
 
 
+
+
         # hilbert bound
+
+
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
-        hilbert_tracker = Line()\
-            .set_stroke(color=BABY_PINK, width=30, opacity=.7)
-        match_hilbert = lambda z: z.become(Line(arrow.get_corner(LEFT),         hilbert = Group(hilbert_tick, hilbert_lab)
+        hilbert = Group(hilbert_tick, hilbert_lab)
         self.play(hilbert.animate.shift(RIGHT))
         self.wait()
 
@@ -41,7 +43,6 @@ class Timeline(Scene):
         blek_lab = Tex("n").next_to(blek_tick, UP)
         blek = Group(blek_tick, blek_lab)
         self.play(blek.animate.shift(8*LEFT))
-        blek_tracker.remove_updater(match_blek)
         self.wait()
 
         blekh_lab_explicit = Tex(r"\sim 10^{10}").move_to(blek_lab)
