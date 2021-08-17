@@ -27,7 +27,7 @@ class Timeline(Scene):
         # blekherman bound
 
         blek_tick = Tex("|").move_to(arrow).shift(5*LEFT)
-        blek_lab = Tex("3").next_to(blek_tick, UP)
+        blek_lab = Tex("n").next_to(blek_tick, UP)
         blek = Group(blek_tick, blek_lab)
         self.play(blek.animate.shift(4*RIGHT))
 
