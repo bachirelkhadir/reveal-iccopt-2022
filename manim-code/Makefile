@@ -18,4 +18,5 @@ Produce:
 
 
 Timeline:
-	manimgl timeline.py Timeline -w && cd output/videos/ && ${CUT_MOV} Timeline.mp4 && cp Timeline*mp4 ../../../reveal/videos/Timeline/
+	#manimgl timeline.py Timeline -w &&
+	cd output/videos/ && ${CUT_MOV} Timeline.mp4 && cp Timeline*mp4 ../../../reveal/videos/Timeline/
