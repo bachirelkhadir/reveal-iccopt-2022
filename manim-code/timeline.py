@@ -29,6 +29,7 @@ class Timeline(Scene):
         hilbert = Group(hilbert_tick, hilbert_lab)
         self.add(hilbert_tracker)
         self.play(hilbert.animate.shift(RIGHT))
+        hilbert_tracker.remove_updater(match_hilbert)
         self.wait()
 
         # blekherman bound
