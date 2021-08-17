@@ -51,6 +51,7 @@ class Timeline(Scene):
         red_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(LEFT), red_endpoint.get_center()).match_style(z)))
         self.add(red_rect, red_endpoint)
 
+        return
         def match_fct(obj):
             return lambda z: z.move_to(obj)
 
