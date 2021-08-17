@@ -27,7 +27,7 @@ class Timeline(Scene):
         n4_lab = Tex("4")
         always(n4_lab.next_to, n4, UP)
 
-        nhigh_lab = Tex("high")
+        nhigh_lab = Text("high")
         always(nhigh_lab.next_to, nhigh, UP)
 
         self.add(n3, n4, nhigh)
