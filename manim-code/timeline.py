@@ -105,7 +105,7 @@ class Timeline(Scene):
 
 
         # bachir
-        bachir_tick = Tex("|").move_to(hilbert_tick).shift(2*LEFT)
+        bachir_tick = Tex("|").move_to(hilbert_tick).shift(RIGHT)
         bachir_lab = Tex("4").next_to(bachir_tick, UP)
         bachir_name = add_author("Today", bachir_tick)
         bachir = Group(bachir_tick, bachir_lab, bachir_name)
