@@ -36,10 +36,16 @@ class Timeline(Scene):
         blekh_lab_explicit = Tex(r"\sim 10^{10}").scale(.7).move_to(blek_lab)
         self.play(Transform(blek_lab, blekh_lab_explicit))
         self.wait()
-        return
 
 
         # james bound
+
+        james_tick = Tex("|").move_to(arrow).shift(2*RIGHT)
+        james_lab = Tex("272").next_to(james_tick, UP)
+        james = Group(james_tick, james_lab)
+        self.play(FadeIn(james))
+        self.wait()
+        return
 
         #today
 
