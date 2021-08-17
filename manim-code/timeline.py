@@ -64,7 +64,7 @@ class Timeline(Scene):
         blek_tick = Tex("|").move_to(arrow).shift(10*RIGHT)
         blek_lab = Tex("n").next_to(blek_tick, UP)
 
-        blek_name = add_author("09', Blekherman", hilbert_tick.get_corner(DOWN))
+        blek_name = add_author("09', Blekherman", blek_tick.get_corner(DOWN))
         blek = Group(blek_tick, blek_lab, blek_name)
 
         match_blek = match_fct(blek_tick)
