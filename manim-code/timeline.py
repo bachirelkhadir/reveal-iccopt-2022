@@ -22,7 +22,8 @@ class Timeline(Scene):
         green_rect = Line()\
             .set_stroke(color=BABY_GREEN, width=30, opacity=.7)
         green_endpoint= Dot()
-        green_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(RIGHT), green_endpoint).match_style(z))
+        green_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(RIGHT), green_endpoint).match_style(z)))
+        self.add(green_rect, green_endpoint)
 
 
         # hilbert bound
@@ -30,24 +31,15 @@ class Timeline(Scene):
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
         hilbert_tracker = Line()\
             .set_stroke(color=BABY_PINK, width=30, opacity=.7)
-        match_hilbert = lambda z: z.become(Line(arrow.get_corner(LEFT), hilbert_tick).match_style(z))
-        hilbert_tracker.add_updater(match_hilbert)
-        hilbert = Group(hilbert_tick, hilbert_lab)
-        self.add(hilbert_tracker)
+        match_hilbert = lambda z: z.become(Line(arrow.get_corner(LEFT),         hilbert = Group(hilbert_tick, hilbert_lab)
         self.play(hilbert.animate.shift(RIGHT))
-        hilbert_tracker.remove_updater(match_hilbert)
         self.wait()
 
         # blekherman bound
 
         blek_tick = Tex("|").move_to(arrow).shift(10*RIGHT)
         blek_lab = Tex("n").next_to(blek_tick, UP)
-        blek_tracker = Line().set_stroke(color=BABY_GREEN, width=30, opacity=.7)
-        match_blek = lambda z: z.become(Line(arrow.get_corner(RIGHT),
-                                             blek_tick).match_style(z))
-        blek_tracker.add_updater(match_blek)
         blek = Group(blek_tick, blek_lab)
-        self.add(blek_tracker)
         self.play(blek.animate.shift(8*LEFT))
         blek_tracker.remove_updater(match_blek)
         self.wait()
