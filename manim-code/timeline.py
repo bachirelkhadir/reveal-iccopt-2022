@@ -67,7 +67,7 @@ class Timeline(Scene):
         hilbert = Group(hilbert_tick, hilbert_lab, hilbert_name)
         match_hilbert = match_fct(hilbert_tick)
         red_endpoint.add_updater(match_hilbert)
-        self.play(hilbert.animate.shift(RIGHT))
+        self.play(FadeIn(hilbert), hilbert.animate.shift(RIGHT))
 
         red_endpoint.remove_updater(match_hilbert)
         self.wait()
@@ -82,7 +82,7 @@ class Timeline(Scene):
 
         match_blek = match_fct(blek_tick)
         green_endpoint.add_updater(match_blek)
-        self.play(blek.animate.shift(2*LEFT))
+        self.play(FadeIn(blek), blek.animate.shift(2*LEFT))
         green_endpoint.remove_updater(match_blek)
         self.wait()
 
