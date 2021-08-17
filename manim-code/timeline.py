@@ -40,7 +40,7 @@ class Timeline(Scene):
 
         # james bound
 
-        james_tick = Tex("|").move_to(arrow).shift(RIGHT)
+        james_tick = Tex("|").move_to(arrow)
         james_lab = Tex("272").next_to(james_tick, UP)
         james = Group(james_tick, james_lab)
         self.play(FadeIn(james))
