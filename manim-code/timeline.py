@@ -5,6 +5,11 @@ import numpy as np
 from colors import *
 np.random.seed(0)
 
+def add_author(name, pos):
+    wedge = Triangle().move_to(pos)
+    lab = Text(name)
+    return Group(wedge, lab)
+
 
 class Timeline(Scene):
     def construct(self):
@@ -42,10 +47,12 @@ class Timeline(Scene):
 
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
-        hilbert = Group(hilbert_tick, hilbert_lab)
+        hilbert_name = add_author("Hilbert", hilbert_tick.get_corner(DOWN))
+        hilbert = Group(hilbert_tick, hilbert_lab, hilbert_name)
         match_hilbert = match_fct(hilbert_tick)
         red_endpoint.add_updater(match_hilbert)
         self.play(hilbert.animate.shift(RIGHT))
+
         red_endpoint.remove_updater(match_hilbert)
         self.wait()
 
