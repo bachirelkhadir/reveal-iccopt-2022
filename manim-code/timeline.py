@@ -18,7 +18,7 @@ class Timeline(Scene):
 
         # hilbert bound
 
-        rbrace = Tex("]").move_to(arrow).shift(3*LEFT)
+        rbrace = Tex("]").move_to(arrow).shift(5*LEFT)
         self.add(rbrace)
         return
 
