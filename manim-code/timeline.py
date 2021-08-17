@@ -20,7 +20,9 @@ class Timeline(Scene):
 
         # green/red rects
         green_rect = Line()\
-            .set_stroke(color=BABY_PINK, width=30, opacity=.7)
+            .set_stroke(color=BABY_GREEN, width=30, opacity=.7)
+        green_left = Dot()
+        green_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(RIGHT), green_left).match_style(z))
 
 
         # hilbert bound
