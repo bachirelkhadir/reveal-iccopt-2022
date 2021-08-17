@@ -98,7 +98,7 @@ class Timeline(Scene):
 
         match_james = match_fct(james_tick)
         green_endpoint.add_updater(match_james)
-        self.play(FadeIn(james), james.animate.shift(LEFT))
+        self.play(FadeIn(james), james.animate.shift(2*LEFT))
 
         green_endpoint.remove_updater(match_james)
         self.wait()
