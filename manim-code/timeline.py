@@ -21,7 +21,7 @@ class Timeline(Scene):
 
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
-        hilbert_tracker = Line().set_stroke(10)
+        hilbert_tracker = Line().set_stroke(width=10)
         hilbert = Group(hilbert_tick, hilbert_lab)
         self.play(hilbert.animate.shift(RIGHT))
         self.wait()
