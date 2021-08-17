@@ -103,3 +103,7 @@ class Timeline(Scene):
         self.play(FadeIn(bachir))
         red_endpoint.remove_updater(match_bachir)
         self.wait()
+
+
+        # remove names
+        self.remove(bachir_name, hilbert_name, james_name, blek_name)
