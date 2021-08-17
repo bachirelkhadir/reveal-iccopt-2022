@@ -30,6 +30,7 @@ class Timeline(Scene):
         blek_lab = Tex("n").next_to(blek_tick, UP)
         blek = Group(blek_tick, blek_lab)
         self.play(blek.animate.shift(4*RIGHT))
+        return
 
 
         # james bound
