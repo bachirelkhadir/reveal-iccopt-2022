@@ -11,7 +11,7 @@ class Timeline(Scene):
         title = Text("Convex but not SOS?").to_edge(UP)
         self.add(title)
 
-        arrow = Vector().scale(10)
+        arrow = Vector().scale(10).shift(LEFT)
         lab_nvar = Text(r"# variables")
         lab_nvar.next_to(arrow, UR).shift(2*LEFT)
         self.add(arrow, lab_nvar)
