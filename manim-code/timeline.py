@@ -6,8 +6,10 @@ from colors import *
 np.random.seed(0)
 
 def add_author(name, pos):
-    wedge = Triangle().move_to(pos)
-    lab = Text(name)
+    wedge = Triangle().move_to(pos).scale(.4)
+    wedge.set_fill(color=BABY_YELLOW, opacity=1)
+    wedge.set_stroke(opacity=0)
+    lab = Text(name).next_to(wedge, DOWN, SMALL_BUFF)
     return Group(wedge, lab)
 
 
