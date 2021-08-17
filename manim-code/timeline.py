@@ -50,6 +50,8 @@ class Timeline(Scene):
         red_endpoint= Dot(color=BABY_PINK).move_to(arrow.get_corner(LEFT))
         red_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(LEFT), red_endpoint.get_center()).match_style(z)))
         self.add(red_rect, red_endpoint)
+        green_endpoint.set_opacity(0)
+        red_endpoint.set_opacity(0)
 
         def match_fct(obj):
             return lambda z: z.move_to(obj)
