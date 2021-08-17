@@ -16,6 +16,18 @@ class Timeline(Scene):
         lab_nvar.next_to(arrow, UR).shift(LEFT)
         self.add(arrow, lab_nvar)
 
+        # hilbert bound
+
+        rbrace = Tex("]")
+        self.add(rbrace)
+        return
+
+        # blekherman bound
+
+        # james bound
+
+        #today
+
         tick = Line().rotate(PI/2).scale(.2)
         n3 = tick.copy().shift(3*LEFT)
         n4 = n3.copy().shift(RIGHT)
