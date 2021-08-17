@@ -23,9 +23,14 @@ class Timeline(Scene):
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
         hilbert = Group(hilbert_tick, hilbert_lab)
         self.play(hilbert.animate.shift(RIGHT))
-        return
 
         # blekherman bound
+
+        blek_tick = Tex("|").move_to(arrow).shift(5*LEFT)
+        blek_lab = Tex("3").next_to(blek_tick, UP)
+        blek = Group(blek_tick, blek_lab)
+        self.play(blek.animate.shift(4*RIGHT))
+
 
         # james bound
 
