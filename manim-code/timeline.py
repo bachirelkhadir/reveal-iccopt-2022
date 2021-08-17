@@ -8,7 +8,7 @@ np.random.seed(0)
 class Timeline(Scene):
     def construct(self):
 
-        title = Text("Convex but not SOS").to_edge(UP)
+        title = Text("Convex but not SOS?").to_edge(UP)
         self.add(title)
 
         arrow = Vector().scale(10)
