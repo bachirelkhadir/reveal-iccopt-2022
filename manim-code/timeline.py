@@ -38,6 +38,7 @@ class Timeline(Scene):
         blek_tracker.add_updater(lambda z: z.become(Line(
             arrow.get_corner(RIGHT), blek_tick).match_style(z)))
         blek = Group(blek_tick, blek_lab)
+        self.add(blek_tracker)
         self.play(blek.animate.shift(8*LEFT))
         self.wait()
 
