@@ -49,7 +49,7 @@ class Timeline(Scene):
 
         # bachir
         bachir_tick = Tex("|").move_to(arrow).shift(2*LEFT)
-        bachir_lab = Tex("5").next_to(bachir_tick, UP)
+        bachir_lab = Tex("4").next_to(bachir_tick, UP)
         bachir = Group(bachir_tick, bachir_lab)
         self.play(FadeIn(bachir))
         self.wait()
