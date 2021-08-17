@@ -82,6 +82,7 @@ class Timeline(Scene):
 
         james_tick = Tex("|").move_to(arrow)
         james_lab = Tex("272").next_to(james_tick, UP)
+        james_name = add_author("21', Saunderson")
         james = Group(james_tick, james_lab)
 
         match_james = match_fct(james_tick)
