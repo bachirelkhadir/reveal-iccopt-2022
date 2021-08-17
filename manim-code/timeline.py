@@ -32,7 +32,9 @@ class Timeline(Scene):
         arrow = Vector().scale(10).shift(LEFT)
         lab_nvar = Text(r"# variables")
         lab_nvar.next_to(arrow, UR).shift(LEFT)
-        self.add(arrow, lab_nvar)
+        self.play(GrowArrow(arrow))
+        self.add(lab_nvar)
+        self.wait()
 
 
         # green/red rects
