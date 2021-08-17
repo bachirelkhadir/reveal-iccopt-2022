@@ -13,5 +13,7 @@ class Timeline(Scene):
         self.add(arrow, lab_nvar)
 
         tick = Line().rotate(PI/2).scale(.2)
-        self.add(tick.copy())
+        n3 = tick.copy().shift(3*LEFT)
+        n4 = n3.copy().shift(RIGHT)
+        self.add(n3, n4)
         self.wait()
