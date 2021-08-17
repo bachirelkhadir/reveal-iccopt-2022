@@ -47,7 +47,7 @@ class Timeline(Scene):
 
         red_rect = Line()\
             .set_stroke(color=BABY_PINK, width=30, opacity=.7)
-        red_endpoint= Dot(color=BABY_PINK)
+        red_endpoint= Dot(color=BABY_PINK).move_to(arrow.get_center(LEFt))
         red_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(LEFT), red_endpoint.get_center()).match_style(z)))
         self.add(red_rect, red_endpoint)
 
