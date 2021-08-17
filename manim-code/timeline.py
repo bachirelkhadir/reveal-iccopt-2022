@@ -24,8 +24,8 @@ class Timeline(Scene):
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
         hilbert_tracker = Line()\
             .set_stroke(color=BABY_PINK, width=30, opacity=.7)
-        hilbert_tracker.add_updater(lambda z: z.become(Line(
-            arrow.get_corner(LEFT), hilbert_tick).match_style(z)))
+        match_hilbert = lambda z: z.become(Line(arrow.get_corner(LEFT), hilbert_tick).match_style(z))
+        hilbert_tracker.add_updater(match_hilbert)
         hilbert = Group(hilbert_tick, hilbert_lab)
         self.add(hilbert_tracker)
         self.play(hilbert.animate.shift(RIGHT))
