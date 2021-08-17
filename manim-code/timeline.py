@@ -2,6 +2,7 @@
 from manimlib import *
 exec(get_custom_config()["universal_import_line"])
 import numpy as np
+from colors import *
 np.random.seed(0)
 
 
@@ -23,6 +24,7 @@ class Timeline(Scene):
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
         hilbert_tracker = Line().set_stroke(color=BABY_GREEN, width=10)
         hilbert = Group(hilbert_tick, hilbert_lab)
+        self.add(hilbert_tracker)
         self.play(hilbert.animate.shift(RIGHT))
         self.wait()
 
