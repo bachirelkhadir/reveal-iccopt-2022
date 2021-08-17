@@ -53,4 +53,3 @@ class Timeline(Scene):
         bachir = Group(bachir_tick, bachir_lab)
         self.play(FadeIn(bachir))
         self.wait()
-        retur
