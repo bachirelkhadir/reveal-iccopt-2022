@@ -50,7 +50,7 @@ class Timeline(Scene):
 
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
-        hilbert_name = add_author("1888, Hilbert", hilbert_tick.get_corner(DOWN))
+        hilbert_name = add_author("1888, Hilbert", hilbert_tick)
         hilbert = Group(hilbert_tick, hilbert_lab, hilbert_name)
         match_hilbert = match_fct(hilbert_tick)
         red_endpoint.add_updater(match_hilbert)
@@ -64,7 +64,7 @@ class Timeline(Scene):
         blek_tick = Tex("|").move_to(arrow).shift(10*RIGHT)
         blek_lab = Tex("n").next_to(blek_tick, UP)
 
-        blek_name = add_author("09', Blekherman", blek_tick.get_corner(DOWN))
+        blek_name = add_author("09', Blekherman", blek_tick)
         blek = Group(blek_tick, blek_lab, blek_name)
 
         match_blek = match_fct(blek_tick)
