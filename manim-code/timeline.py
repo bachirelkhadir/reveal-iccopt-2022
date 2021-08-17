@@ -74,7 +74,7 @@ class Timeline(Scene):
 
         # blekherman bound
 
-        blek_tick = Tex("|").move_to(arrow).shift(10*RIGHT)
+        blek_tick = Tex("|").move_to(arrow.get_corner(RIGHT))
         blek_lab = Tex("n").next_to(blek_tick, UP)
 
         blek_name = add_author("09', Blekherman", blek_tick)
@@ -82,7 +82,7 @@ class Timeline(Scene):
 
         match_blek = match_fct(blek_tick)
         green_endpoint.add_updater(match_blek)
-        self.play(blek.animate.shift(8*LEFT))
+        self.play(blek.animate.shift(LEFT))
         green_endpoint.remove_updater(match_blek)
         self.wait()
 
