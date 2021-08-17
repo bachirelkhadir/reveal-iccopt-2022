@@ -5,7 +5,7 @@
 # @version 0.1
 
 
-CUT_MOV =  "/home/bachir/.local/bin/cut_video_on_black_screen.py"
+CUT_MOV =  "/home/bachir/.local/bin/cut_video_on_black_screen_reencode.py"
 
 CauchySchwarz:
 	manimgl cauchy_schwarz.py CauchySchwarz -w
