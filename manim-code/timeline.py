@@ -8,5 +8,6 @@ np.random.seed(0)
 class Timeline(Scene):
     def construct(self):
         arrow = Vector().scale(10)
+        lab_nvar = Tex("\# of variables")
         self.add(arrow)
         self.wait()
