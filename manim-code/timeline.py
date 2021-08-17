@@ -13,7 +13,7 @@ class Timeline(Scene):
 
         arrow = Vector().scale(10).shift(LEFT)
         lab_nvar = Text(r"# variables")
-        lab_nvar.next_to(arrow, UR).shift(2*LEFT)
+        lab_nvar.next_to(arrow, UR).shift(LEFT)
         self.add(arrow, lab_nvar)
 
         tick = Line().rotate(PI/2).scale(.2)
