@@ -21,7 +21,6 @@ class Timeline(Scene):
         # green/red rects
         green_rect = Line()\
             .set_stroke(color=BABY_PINK, width=30, opacity=.7)
-        Line()
 
 
         # hilbert bound
