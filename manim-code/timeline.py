@@ -17,9 +17,14 @@ class Timeline(Scene):
         lab_nvar.next_to(arrow, UR).shift(LEFT)
         self.add(arrow, lab_nvar)
 
+
+        # green/red rects
+        green_rect =  Line()\
+            .set_stroke(color=BABY_PINK, width=30, opacity=.7)
+        Line()
+
+
         # hilbert bound
-
-
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
         hilbert_tracker = Line()\
