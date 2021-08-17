@@ -9,6 +9,6 @@ class Timeline(Scene):
     def construct(self):
         arrow = Vector().scale(10)
         lab_nvar = Tex("\# of variables")
-        lab_nvar.next_to(arrow, UP)
+        lab_nvar.next_to(arrow, UR)
         self.add(arrow, lab_nvar)
         self.wait()
