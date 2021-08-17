@@ -22,7 +22,7 @@ class Timeline(Scene):
 
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
-        hilbert_tracker = Line().set_stroke(color=BABY_pink, width=10)
+        hilbert_tracker = Line().set_stroke(color=BABY_PINK, width=10)
         hilbert_tracker.add_updater(lambda z: z.become(Line(
             arrow.get_corner(LEFT), hilbert_tick).match_style(z)))
         hilbert = Group(hilbert_tick, hilbert_lab)
