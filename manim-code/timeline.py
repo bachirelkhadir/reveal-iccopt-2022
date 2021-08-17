@@ -31,4 +31,5 @@ class Timeline(Scene):
         always(nhigh_lab.next_to, nhigh, UP)
 
         self.add(n3, n4, nhigh)
+        self.add(n3_lab, n4_lab, nhigh_lab)
         self.wait()
