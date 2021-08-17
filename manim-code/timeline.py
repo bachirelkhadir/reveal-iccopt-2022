@@ -8,7 +8,8 @@ np.random.seed(0)
 class Timeline(Scene):
     def construct(self):
 
-        title = Text("Convex but not SOS")
+        title = Text("Convex but not SOS").to_edge(UP)
+        self.add(title)
         arrow = Vector().scale(10)
         lab_nvar = Text(r"# variables")
         lab_nvar.next_to(arrow, UR).shift(2*LEFT)
