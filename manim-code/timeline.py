@@ -45,6 +45,14 @@ class Timeline(Scene):
         james = Group(james_tick, james_lab)
         self.play(FadeIn(james))
         self.wait()
+
+
+        # bachir
+        bachir_tick = Tex("|").move_to(arrow)
+        bachir_lab = Tex("5").next_to(bachir_tick, UP)
+        bachir = Group(bachir_tick, bachir_lab)
+        self.play(FadeIn(bachir))
+        self.wait()
         return
 
         #today
