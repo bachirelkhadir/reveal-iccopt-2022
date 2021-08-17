@@ -43,6 +43,7 @@ class Timeline(Scene):
         blek = Group(blek_tick, blek_lab)
         self.add(blek_tracker)
         self.play(blek.animate.shift(8*LEFT))
+        blek_tracker.remove_updater(match_blek)
         self.wait()
 
         blekh_lab_explicit = Tex(r"\sim 10^{10}").move_to(blek_lab)
