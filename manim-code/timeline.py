@@ -9,7 +9,7 @@ def add_author(name, pos):
     wedge = Triangle().move_to(pos).scale(.1).shift(DOWN/3)
     wedge.set_fill(color=BABY_YELLOW, opacity=1)
     wedge.set_stroke(opacity=0)
-    lab = Text(name).scale(.8).next_to(wedge, DOWN, LARGE_BUFF ).rotate(-PI/3)
+    lab = Text(name).scale(.8).rotate(-PI/3).next_to(wedge, DOWN, LARGE_BUFF )
     lab.set_color(BABY_YELLOW)
     return Group(wedge, lab)
 
