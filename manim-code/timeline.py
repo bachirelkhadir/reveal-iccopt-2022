@@ -33,7 +33,7 @@ class Timeline(Scene):
         self.play(blek.animate.shift(8*LEFT))
         self.wait()
 
-        blekh_lab_explicit = Tex(r"\sim 10^{10}").scale(.7).move_to(blek_lab)
+        blekh_lab_explicit = Tex(r"\sim 10^{10}").move_to(blek_lab)
         self.play(Transform(blek_lab, blekh_lab_explicit))
         self.wait()
 
