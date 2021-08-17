@@ -40,7 +40,7 @@ class Timeline(Scene):
         # green/red rects
         green_rect = Line()\
             .set_stroke(color=BABY_GREEN, width=30, opacity=.7)
-        green_endpoint= Dot(color=BABY_GREEN).move_to(arrow.get_corner(LEFT))
+        green_endpoint= Dot(color=BABY_GREEN).move_to(arrow.get_corner(RIGHT))
         green_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(RIGHT), green_endpoint.get_center()-.01*RIGHT).match_style(z)))
         self.add(green_rect, green_endpoint)
 
