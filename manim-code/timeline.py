@@ -55,7 +55,7 @@ class Timeline(Scene):
         blek_lab = Tex("n").next_to(blek_tick, UP)
         blek = Group(blek_tick, blek_lab)
 
-        match_hilbert = match_fct(hilbert_tick)
+        match_blek = match_fct(hilbert_tick)
         green_endpoint.add_updater(match_blek)
         self.play(blek.animate.shift(8*LEFT))
         green_endpoint.remove_updater(match_blek)
