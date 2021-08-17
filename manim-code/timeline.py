@@ -15,6 +15,6 @@ class Timeline(Scene):
         tick = Line().rotate(PI/2).scale(.2)
         n3 = tick.copy().shift(3*LEFT)
         n4 = n3.copy().shift(RIGHT)
-        nhigh = n3.copy().shift(3*RIGHT)
+        nhigh = n3.copy().shift(6*RIGHT)
         self.add(n3, n4, nhigh)
         self.wait()
