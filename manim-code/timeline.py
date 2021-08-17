@@ -7,5 +7,6 @@ np.random.seed(0)
 
 class Timeline(Scene):
     def construct(self):
-        self.add(Text("Class " + type(self).__name__))
+        arrow = Vector().scale(3)
+        self.add(arrow)
         self.wait()
