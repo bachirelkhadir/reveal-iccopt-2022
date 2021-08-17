@@ -84,7 +84,7 @@ class Timeline(Scene):
         bachir_tick = Tex("|").move_to(arrow).shift(2*LEFT)
         bachir_lab = Tex("4").next_to(bachir_tick, UP)
         bachir = Group(bachir_tick, bachir_lab)
-        bachir_hilbert = match_fct(bachir_tick)
+        match_bachir = match_fct(bachir_tick)
         red_endpoint.add_updater(match_bachir)
         self.play(FadeIn(bachir))
         red_point.remove_updated(match_bachir)
