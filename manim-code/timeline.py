@@ -104,6 +104,7 @@ class Timeline(Scene):
         red_endpoint.remove_updater(match_bachir)
         self.wait()
 
+        return
 
         # remove names
         self.remove(bachir_name, hilbert_name, james_name, blek_name)
