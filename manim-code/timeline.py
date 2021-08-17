@@ -29,7 +29,7 @@ class Timeline(Scene):
         blek_tick = Tex("|").move_to(arrow).shift(5*LEFT)
         blek_lab = Tex("n").next_to(blek_tick, UP)
         blek = Group(blek_tick, blek_lab)
-        self.play(blek.animate.shift(4*RIGHT))
+        self.play(blek.animate.shift(8*RIGHT))
         return
 
 
