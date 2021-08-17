@@ -42,14 +42,14 @@ class Timeline(Scene):
             .set_stroke(color=BABY_GREEN, width=30, opacity=.7)
         green_endpoint= Dot(color=BABY_GREEN).move_to(arrow.get_corner(RIGHT))
         green_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(RIGHT), green_endpoint.get_center()-.01*RIGHT).match_style(z)))
-        self.add(green_rect)
+        self.add(green_rect, green_endpoint)
 
 
         red_rect = Line()\
             .set_stroke(color=BABY_PINK, width=30, opacity=.7)
         red_endpoint= Dot(color=BABY_PINK).move_to(arrow.get_corner(LEFT))
         red_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(LEFT), red_endpoint.get_center()).match_style(z)))
-        self.add(red_rect)
+        self.add(red_rect, red_endpoint)
 
         def match_fct(obj):
             return lambda z: z.move_to(obj)
