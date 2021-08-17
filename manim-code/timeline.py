@@ -91,14 +91,14 @@ class Timeline(Scene):
 
         # james bound
 
-        james_tick = Tex("|").move_to(arrow)
+        james_tick = Tex("|").move_to(arrow).move_to(blek_tick)
         james_lab = Tex("272").next_to(james_tick, UP)
         james_name = add_author("21', Saunderson", james_tick)
         james = Group(james_tick, james_lab, james_name)
 
         match_james = match_fct(james_tick)
         green_endpoint.add_updater(match_james)
-        self.play(FadeIn(james))
+        self.play(FadeIn(james), james.animate.shift(LEFT))
 
         green_endpoint.remove_updater(match_james)
         self.wait()
