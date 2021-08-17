@@ -20,5 +20,15 @@ class Timeline(Scene):
         n3 = tick.copy().shift(3*LEFT)
         n4 = n3.copy().shift(RIGHT)
         nhigh = n3.copy().shift(6*RIGHT)
+
+        n3_lab = Tex("3")
+        always(n3_lab.next_to, n3, UP)
+
+        n4_lab = Tex("4")
+        always(n4_lab.next_to, n4, UP)
+
+        nhigh_lab = Tex("high")
+        always(nhigh_lab.next_to, nhigh, UP)
+
         self.add(n3, n4, nhigh)
         self.wait()
