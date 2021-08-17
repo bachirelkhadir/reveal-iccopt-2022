@@ -50,7 +50,7 @@ class Timeline(Scene):
 
         hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
-        hilbert_name = add_author("Hilbert", hilbert_tick.get_corner(DOWN))
+        hilbert_name = add_author("1888, Hilbert", hilbert_tick.get_corner(DOWN))
         hilbert = Group(hilbert_tick, hilbert_lab, hilbert_name)
         match_hilbert = match_fct(hilbert_tick)
         red_endpoint.add_updater(match_hilbert)
