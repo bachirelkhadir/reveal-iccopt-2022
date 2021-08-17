@@ -18,4 +18,4 @@ Produce:
 
 
 Timeline:
-	manimgl timeline.py Timeline -w && PNG_CONVERTER = "/home/bachir/.local/bin/mov_to_pngs.sh"
+	manimgl timeline.py Timeline -w && cd output/videos/ && ${CUT_MOV} Timeline.mov
