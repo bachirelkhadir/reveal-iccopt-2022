@@ -87,5 +87,5 @@ class Timeline(Scene):
         match_bachir = match_fct(bachir_tick)
         red_endpoint.add_updater(match_bachir)
         self.play(FadeIn(bachir))
-        red_point.remove_updated(match_bachir)
+        red_endpoint.remove_updated(match_bachir)
         self.wait()
