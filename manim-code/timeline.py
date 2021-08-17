@@ -21,7 +21,7 @@ class Timeline(Scene):
         rect = Rectangle(fill_color=color, strole_color=color, fill_opacity=1).scale(100)
         super().wait(timeout)
         self.add(rect)
-        self.wait(timeout)
+        super().wait(timeout)
         self.remove(rect)
 
     def construct(self):
