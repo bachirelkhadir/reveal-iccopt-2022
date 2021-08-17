@@ -23,6 +23,7 @@ class Timeline(Scene):
         hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
         hilbert = Group(hilbert_tick, hilbert_lab)
         self.play(hilbert.animate.shift(RIGHT))
+        self.wait()
 
         # blekherman bound
 
@@ -30,6 +31,11 @@ class Timeline(Scene):
         blek_lab = Tex("n").next_to(blek_tick, UP)
         blek = Group(blek_tick, blek_lab)
         self.play(blek.animate.shift(8*RIGHT))
+        self.wait()
+
+        blekh_lab_explicit = Tex("236723")
+        self.play(Transform(blek_lab, blekh_lab_explicit))
+        self.wait()
         return
 
 
