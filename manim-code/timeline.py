@@ -21,14 +21,14 @@ class Timeline(Scene):
         # green/red rects
         green_rect = Line()\
             .set_stroke(color=BABY_GREEN, width=30, opacity=.7)
-        green_endpoint= Dot()
+        green_endpoint= Dot(color=BABY_GREEN)
         green_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(RIGHT), green_endpoint).match_style(z)))
         self.add(green_rect, green_endpoint)
 
 
         red_rect = Line()\
             .set_stroke(color=BABY_PINK, width=30, opacity=.7)
-        red_endpoint= Dot()
+        red_endpoint= Dot(color=BABY_RED)
         red_rect.add_updater(lambda z: z.become(Line(arrow.get_corner(LEFT), red_endpoint).match_style(z)))
         self.add(red_rect, red_endpoint)
 
