@@ -17,6 +17,7 @@ def add_author(name, pos):
 class Timeline(Scene):
     def wait(self):
         color = BLACK
+        timeout = 1
         rect = Rectangle(fill_color=color, strole_color=color, fill_opacity=1).scale(100)
         super().wait(timeout)
         self.add(rect)
