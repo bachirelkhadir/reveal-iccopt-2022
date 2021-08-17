@@ -36,8 +36,8 @@ class Timeline(Scene):
         blek_tick = Tex("|").move_to(arrow).shift(10*RIGHT)
         blek_lab = Tex("n").next_to(blek_tick, UP)
         blek_tracker = Line().set_stroke(color=BABY_GREEN, width=30, opacity=.7)
-        blek_tracker.add_updater(lambda z: z.become(Line(
-            arrow.get_corner(RIGHT), blek_tick).match_style(z)))
+        match_blek = lambda z: z.become(Line(arrow.get_corner(RIGHT), blek_tick).match_style(z))
+        blek_tracker.add_updater(match_blek)
         blek = Group(blek_tick, blek_lab)
         self.add(blek_tracker)
         self.play(blek.animate.shift(8*LEFT))
