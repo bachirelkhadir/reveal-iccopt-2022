@@ -105,13 +105,13 @@ class Timeline(Scene):
 
 
         # bachir
-        bachir_tick = Tex("|").move_to(hilbert_tick).shift(RIGHT)
+        bachir_tick = Tex("|").move_to(hilbert_tick)
         bachir_lab = Tex("4").next_to(bachir_tick, UP)
         bachir_name = add_author("Today", bachir_tick)
         bachir = Group(bachir_tick, bachir_lab, bachir_name)
         match_bachir = match_fct(bachir_tick)
         red_endpoint.add_updater(match_bachir)
-        self.play(FadeIn(bachir))
+        self.play(FadeIn(bachir), bachir.animate.shift(RIGHT))
         red_endpoint.remove_updater(match_bachir)
         self.wait()
 
