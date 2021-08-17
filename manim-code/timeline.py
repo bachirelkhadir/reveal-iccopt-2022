@@ -19,9 +19,10 @@ class Timeline(Scene):
         # hilbert bound
 
 
-        hilbert = Tex("]").move_to(arrow).shift(5*LEFT)
-
-        self.add(rbrace)
+        hilbert_tick = Tex("]").move_to(arrow).shift(5*LEFT)
+        hilbert_lab = Tex("3").next_to(hilbert_tick, UP)
+        hilbert = Group(hilbert_tick, hilbert_lab)
+        self.play(hilbert.animate.shift(RIGHT))
         return
 
         # blekherman bound
