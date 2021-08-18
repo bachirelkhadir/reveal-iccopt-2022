@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Manim Video Slide</title>
+		<title>Conv vs SOS</title>
 
 		<link rel="stylesheet" href="reveal_js/dist/reset.css">
 		<link rel="stylesheet" href="reveal_js/dist/reveal.css">
 		<link rel="stylesheet" href="reveal_js/dist/theme/black.css">
+		<link rel="stylesheet" href="css/bachir.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal_js/lib/css/monokai.css">
@@ -18,13 +19,75 @@
 
 			<div class="slides">
 
+              <section data-external="includes/front_page.html">Front Page HERE</section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part0.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part1.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part2.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part3.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part4.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part5.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part6.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part7.mp4" ></section>
+				<!-- <section data-background-video="videos/CONV/ConvexConesScene-part8.mp4" >Useless</section>  -->
+				<section data-background-video="videos/CONV/ConvexConesScene-part9.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part10.mp4" ></section>
+				<!-- <section data-background-video="videos/CONV/ConvexConesScene-part11.mp4" >Useless?</section>  -->
+				<!-- <section data-background-video="videos/CONV/ConvexConesScene-part12.mp4" >Useless???</section>  -->
+				<section data-background-video="videos/CONV/ConvexConesScene-part13.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part14.mp4" ></section>
+				<!-- <section data-background-video="videos/CONV/ConvexConesScene-part15.mp4" >WHAT?</section>  -->
 
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-				<script src="js/add_video_slide.js" slide_scene="CauchySchwarz"></script>
 
 
-			</div>
+
+
+				<section>
+					<h2>Interplay between
+						<span style="color: var(--baby-pink)">SOS</span> and
+						<span style="color: var(--baby-blue)">Convexity</span>
+				</h2></section>
+
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part0.mp4" ></section>
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part1.mp4" ></section>
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part2.mp4" ></section>
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part3.mp4" ></section>
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part4.mp4" ></section>
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part5.mp4" ></section>
+				<section data-background-video="videos/CONV/MinConvexPolyScene-part6.mp4" ></section>
+
+
+
+
+
+
+
+				<section data-background-video="videos/CONV/ConvexConesScene-part16.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part17.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part18.mp4" ></section>
+				<section data-background-video="videos/CONV/ConvexConesScene-part19.mp4" ></section>
+
+                <section data-background="videos/screenshot.png" data-external="includes/modified_slide.html">Modified slide</section>
+                <section  data-external="includes/james_example.html">James Example</section>
+
+                <section  data-external="includes/timeline.html">Timeline</section>
+
+                <section  data-external="includes/plan.html">Timeline</section>
+
+
+				<section><h1>Dual of the Cone of SOS Forms</h1></section>
+				<section data-external="includes/dual_sos.html">Dual SOS</section>
+
+				<section><h1>Dual of the Cone of Convex Forms</h1></section>
+				<section data-external="includes/cs.html">CS</section>
+
+				<section><h1>Putting Everything together</h1></section>
+				<section data-external="includes/putting_together.html">Putting everything together</section>
+
+				<!-- Conclusion -->
+
+				<section data-background-video="videos/Timeline/Timeline-part5.mp4"></section>
+
+
 		</div>
 
 
@@ -32,15 +95,37 @@
 		<script src="reveal_js/plugin/notes/notes.js"></script>
 		<script src="reveal_js/plugin/markdown/markdown.js"></script>
 		<script src="reveal_js/plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+			  transition: 'none', 
+			  backgroundTransition: 'none',
+			  width: 1280,
+			  height: 720,
 
+			  math: {
+				mathjax: 'plugin/math/MathJax-2.7.7/MathJax.js',
+				config: 'TeX-AMS_HTML-full',
+				TeX: { Macros: { R: "{\\mathbb R}"} }
+			  },
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			  plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,
+                           RevealMath, 
+					   ],
+
+                navigationMode: 'linear',
+
+              dependencies: [
+				{ 
+				  src: 'plugin/external/external.js', 
+				  condition: function() { 
+					return !!document.querySelector( '[data-external],[data-external-replace]' ); 
+				  }},],
+
 			});
 		</script>
 		<script src="js/video_slide.js"></script>

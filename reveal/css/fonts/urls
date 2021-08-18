@@ -1,0 +1,5 @@
+
+wget http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf
+wget http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf
+wget http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf
+wget http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf

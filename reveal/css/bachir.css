@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Computer Modern";
+  src: url('fonts/Serif/cmunrm.ttf');
+}
+
+:root {
+  --r-background-color: #1c2f3f;
+  --r-main-font: "Computer Modern", sans-serif;
+  --baby-pink: #f7a1a3;
+  --baby-yellow: #ffff8f;
+  --baby-blue: #98cdd9;
+  --baby-green: #95f5c2;
+}
+
+h3.author {
+    color:#a7e22e;
+    font-family: Roboto, Helvetica, Arial, serif;
+    background-color: #1c2f3f;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: .7em;
+    text-transform: none;
+}
+
+
+/* .reveal  .talktitle { */
+/*     display: block; */
+/*     font-family: Oswald,sans-serif; */
+/*     font-size: 1em;  */
+/* } */
+
+
+
+.reveal p.talktitle {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    margin-top: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 0px;
+    text-justify: inter-word;
+
+}
+
+
+
+
+.reveal h3.institution {
+    /* font-family: "Lucida Console", Courier, monospace; */
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    font-size: .5em;
+}
+
+.reveal img.logo {
+    margin-top: 10px;
+}
