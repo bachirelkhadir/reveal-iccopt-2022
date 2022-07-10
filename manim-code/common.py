@@ -27,8 +27,7 @@ def make_thm(label, name=r"Thm", line_break=True):
         label_name.next_to(label, LEFT, MED_LARGE_BUFF)
 
     rect = SurroundingRectangle(VGroup(label_name, label))
-
-    scale( rect, 1.1*RIGHT+1.2*UP)
+    rect_scale( rect, 1.1*RIGHT+1.2*UP)
     rect.set_fill(BLACK, opacity=.5)
     rect.set_stroke(BLACK)
     return VGroup(rect, label_name, label)
